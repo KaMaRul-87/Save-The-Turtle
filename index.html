@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save The Turtle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Bekas Utama Permainan (Tengah Skrin) -->
+    <div id="game-container">
+        
+        <!-- Papan Atas (HUD) -->
+        <div id="ui-container">
+            <div class="hud-item-wrapper">
+                <div class="hud-btn" id="score-board">Markah: <span id="score">0</span></div>
+                <div id="lives-board">❤️❤️❤️</div>
+            </div>
+            
+            <div class="hud-item-wrapper">
+                <div class="hud-btn" id="timer-board">Masa: <span id="timer">60</span>s</div>
+            </div>
+        </div>
+
+        <!-- Penyu (Pemain) -->
+        <img src="assets/penyu.png" id="turtle" alt="Penyu">
+
+        <!-- Objek Sampah/Musuh -->
+        <div id="waste-container"></div>
+
+        <!-- Pop-up Scoreboard & Input Nama -->
+        <div id="game-over-screen" class="hidden">
+            <div class="custom-scoreboard">
+                
+                <h1 id="game-status-title">MASA TAMAT ⏳</h1>
+                
+                <!-- Kad Gelap Dalam Bingkai -->
+                <div class="inner-card">
+                    <h2>🏆 TAHNIAH! 🏆</h2>
+                    <p>Masukkan nama anda untuk Leaderboard:</p>
+                    
+                    <input type="text" id="player-name" placeholder="Nama Anda..." maxlength="15" autocomplete="off">
+                    
+                    <button id="submit-score-btn">HANTAR SKOR 🚀</button>
+                </div>
+
+                <p class="space-hint">(atau tekan Spacebar)</p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
